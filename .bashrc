@@ -23,5 +23,5 @@ P_RESET="\[$(tput sgr0)\]"
 PS1="$P_BLUE\u@\h:$P_RED\t$P_MAGENTA\w \\$ $P_RESET"
 
 # Setting aliases
-alias beast='ssh jeremy@192.168.0.106'
+
 alias f='fff'
