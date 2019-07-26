@@ -1,0 +1,30 @@
+set realname = "Jeremiah Lighthouse"
+set from = "jeremiahlighthouse@gmail.com"
+set use_from = yes
+set envelope_from = yes
+
+set smtp_url = "smtps://jeremiahlighthouse@gmail.com@smtp.gmail.com:465/"
+set imap_user = "jeremiahlighthouse@gmail.com"
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set ssl_force_tls = yes
+
+# encrypted IMAP/SMTP passwords
+source "gpg -d ~/.config/mutt/password.gpg |"
+
+# G to get mail
+bind index G imap-fetch-mail
+set editor = "vim"
+set charset = "utf-8"
+set record = ''
+
+# set date order of messages
+set sort = reverse-date-received
+set sort = threads
+set sort_browser = reverse-date
+set sort_aux = last-date-received
+
+# side bar
+set sidebar_width = 12
+set sidebar_visible = yes
+mailboxes = inbox = ml
